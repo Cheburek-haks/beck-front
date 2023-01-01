@@ -1,12 +1,12 @@
 import "./App.css";
-import APIResponse from "./components/APIResponseTest";
+import APIRequest from "./components/APIRequest";
 
 function App() {
-    return (
-        <div className="App">
-            <APIResponse />
-        </div>
-    );
+  return (
+    <div className="App">
+      <APIRequest />
+    </div>
+  );
 }
 
 export default App;
