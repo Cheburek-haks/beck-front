@@ -4,7 +4,7 @@ const router = express.Router({ mergeParams: true });
 
 router.use("/auth", require("./auth.routes"));
 router.use("/comment", require("./comment.routes"));
-// router.use("/quality", require("./quality.routes"));
+router.use("/quality", require("./quality.routes"));
 router.use("/profession", require("./profession.routes"));
 router.use("/users", require("./user.routes"));
 

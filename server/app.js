@@ -19,18 +19,20 @@ app.use("/api", routes);
 // }
 
 async function start() {
-  try {
-    mongoose.connection.once("open", () => {
-      initDatabase();
-    });
-    await mongoose.connect(config.get("mongoURI"));
-    console.log(chalk.blue("MongoDB connetced"));
-    app.listen(port, (res, req) => {
-      console.log(chalk.green(`Server has been started on port - ${port}`));
-    });
-  } catch (error) {
-    console.log(chalk.red(error.message));
-    process.exit(1);
-  }
+    try {
+        mongoose.connection.once("open", () => {
+            initDatabase();
+        });
+        await mongoose.connect(config.get("mongoURI"));
+        console.log(chalk.blue("MongoDB connected"));
+        app.listen(port, (res, req) => {
+            console.log(
+                chalk.green(`Server has been started on port - ${port}`)
+            );
+        });
+    } catch (error) {
+        console.log(chalk.red(error.message));
+        process.exit(1);
+    }
 }
 start();

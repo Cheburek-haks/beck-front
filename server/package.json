@@ -5,15 +5,18 @@
     "main": "index.js",
     "scripts": {
         "start": "cross-env NODE_ENV=production node app.js",
-        "serve": "cross-env NODE_ENV=development nodemon app.js"
+        "server": "cross-env NODE_ENV=development nodemon app.js"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "bcryptjs": "^2.4.3",
         "chalk": "^4.1.2",
         "config": "^3.3.8",
         "express": "^4.18.2",
+        "express-validator": "^6.14.2",
+        "jsonwebtoken": "^9.0.0",
         "mongoose": "^6.8.1"
     },
     "devDependencies": {
