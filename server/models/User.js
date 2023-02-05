@@ -5,7 +5,7 @@ const shema = new Schema(
         name: { type: String },
         email: { type: String, required: true, unique: true },
         password: { type: String },
-        completedMeetings: { Type: String },
+        completedMeetings: { type: String },
         image: String,
         profession: { type: Schema.Types.ObjectId, ref: "Profession" },
         qualities: [{ type: Schema.Types.ObjectId, ref: "Qualities" }],

@@ -34,5 +34,12 @@ class TokenServices {
             return null;
         }
     }
+    validateAcces(accesToken) {
+        try {
+            return jwt.verify(accesToken, config.get("accessSecret"));
+        } catch (e) {
+            return null;
+        }
+    }
 }
 module.exports = new TokenServices();
